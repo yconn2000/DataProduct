@@ -1,0 +1,47 @@
+MPG Calculator
+========================================================
+author: Ed Yang
+date: 6/26/2016
+autosize: true
+
+Overview
+========================================================
+
+Fuel effency is one of the factor people look into before they purchase a car
+
+The factors directly related to the cars' fuel effency are
+
+- Weight
+- Engine Displacement
+- Transmission Type
+
+
+There is another factor that many people think it might inpact a car's MPG is the munber of cylendar
+So we also put the factor into the perdition model
+
+MPG Predition App
+========================================================
+In this simple Shiny app, users can selec any combination of configuration of a car
+and the app will estimate the MPG based on the 1974 Motor Trend magazine data set
+
+https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html
+
+This app does not reflect the technology change of fuel injection system and different emission standards in each states.
+
+Single Variable Regression Plots
+========================================================
+
+```{r, echo=FALSE}
+tranny <- lm(mtcars$mpg ~ mtcars$am)
+layout(matrix(c(1,2,3,4),2,2))
+plot(tranny)
+
+```
+
+Summary
+========================================================
+This app shows that via a simple tool "Shiny"
+Data Scientist can easily create an app that dynamically analize a dataset
+then provide real time prediction
+Using the preset model.
+Turning complicated skill set into a useable tool for everyone!
